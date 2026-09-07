@@ -14,14 +14,6 @@ export const App = () => {
 	const [articleState, setArticleState] =
 		useState<ArticleStateType>(defaultArticleState);
 
-	const handleApply = (newState: ArticleStateType) => {
-		setArticleState(newState);
-	};
-
-	const handleReset = () => {
-		setArticleState(defaultArticleState);
-	};
-
 	return (
 		<main
 			className={clsx(styles.main)}
@@ -35,9 +27,8 @@ export const App = () => {
 				} as CSSProperties
 			}>
 			<ArticleParamsForm
-				currentState={articleState}
-				onApply={handleApply}
-				onReset={handleReset}
+				onApply={setArticleState}
+				defaultState={defaultArticleState}
 			/>
 			<Article />
 		</main>
