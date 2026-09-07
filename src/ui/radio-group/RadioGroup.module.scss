@@ -25,14 +25,12 @@
 	justify-content: center;
 	align-items: center;
 	box-sizing: border-box;
-	width: 124px;
+	width: 123px;
 	height: 35px;
 	text-align: center;
 	border-right: 1px solid #000000;
 	cursor: pointer;
 }
-
-/* Убираем бордер у последнего в radiogroup, чтобы не было двойного бордера */
 
 .label:hover {
 	background-color: #ffedab;
