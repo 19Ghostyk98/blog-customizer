@@ -80,49 +80,67 @@ export const ArticleParamsForm = ({
 					[styles.container_open]: isSidebarOpen,
 				})}>
 				<form className={styles.form} onSubmit={handleSubmit}>
-					<Text size={31} weight={800} uppercase align='left'>
-						Задайте параметры
-					</Text>
+					{}
+					<div className={styles.spacingTitleToFont}>
+						<Text size={31} weight={800} uppercase align='left'>
+							Задайте параметры
+						</Text>
+					</div>
 
-					<Select
-						selected={formState.fontFamilyOption}
-						options={fontFamilyOptions}
-						onChange={handleChange('fontFamilyOption')}
-						title='Шрифт'
-					/>
+					{}
+					<div className={styles.spacingFontToSize}>
+						<Select
+							selected={formState.fontFamilyOption}
+							options={fontFamilyOptions}
+							onChange={handleChange('fontFamilyOption')}
+							title='Шрифт'
+						/>
+					</div>
 					<Separator />
 
-					<RadioGroup
-						name='fontSize'
-						options={fontSizeOptions}
-						selected={formState.fontSizeOption}
-						onChange={handleChange('fontSizeOption')}
-						title='Размер шрифта'
-					/>
+					{}
+					<div className={styles.spacingSizeToFontColor}>
+						<RadioGroup
+							name='fontSize'
+							options={fontSizeOptions}
+							selected={formState.fontSizeOption}
+							onChange={handleChange('fontSizeOption')}
+							title='Размер шрифта'
+						/>
+					</div>
 					<Separator />
 
-					<Select
-						selected={formState.fontColor}
-						options={fontColors}
-						onChange={handleChange('fontColor')}
-						title='Цвет шрифта'
-					/>
+					{}
+					<div className={styles.spacingFontColorToBackground}>
+						<Select
+							selected={formState.fontColor}
+							options={fontColors}
+							onChange={handleChange('fontColor')}
+							title='Цвет шрифта'
+						/>
+					</div>
 					<Separator />
 
-					<Select
-						selected={formState.backgroundColor}
-						options={backgroundColors}
-						onChange={handleChange('backgroundColor')}
-						title='Цвет фона'
-					/>
+					{}
+					<div className={styles.spacingBackgroundToWidth}>
+						<Select
+							selected={formState.backgroundColor}
+							options={backgroundColors}
+							onChange={handleChange('backgroundColor')}
+							title='Цвет фона'
+						/>
+					</div>
 					<Separator />
 
-					<Select
-						selected={formState.contentWidth}
-						options={contentWidthArr}
-						onChange={handleChange('contentWidth')}
-						title='Ширина контента'
-					/>
+					{}
+					<div className={styles.spacingWidthToButtons}>
+						<Select
+							selected={formState.contentWidth}
+							options={contentWidthArr}
+							onChange={handleChange('contentWidth')}
+							title='Ширина контента'
+						/>
+					</div>
 
 					<div className={styles.bottomContainer}>
 						<Button
